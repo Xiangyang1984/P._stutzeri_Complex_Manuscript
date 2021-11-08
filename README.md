@@ -2,7 +2,7 @@
 Serveral Perlscript are used in this Manuscript titled "Comparative Genomics of Pseudomonas stutzeri Complex: Taxonomic Assignments and Genetic Diversity".
 
 
-1. Pan-genome analysis
+##1. Pan-genome analysis
 
     extract_protein_dir.pl: Run this command to enble users to extract protein sequences for genomes using multiple threads. 
 
@@ -21,14 +21,14 @@ Please refer to PGAP manual (https://sourceforge.net/projects/pgap/) for perform
 
 
 
-2. Concat_Seq.pl  Run this command to enble users to concatenate alignment files into a pseudo-DNA fasta file. 
+##2. Concat_Seq.pl  Run this command to enble users to concatenate alignment files into a pseudo-DNA fasta file. 
     Usage: Concat_Seq.pl -dir alignment_file_directory
 
     FOR EXAMPLE: perl Concat_Seq.pl -dir alignment_dir
     alignment_dir is a directory containing alignment files as FASTA format file.
     After run Concat_Seq.pl, a concatenation sequence file called "concatenation.fasta" is produced in directory where Concat_Seq.pl is located. The detailed usage instructions is included in extract_protein_dir.pl.
 
-3. COG annotation analysis
+##3. COG annotation analysis
    COG_annotation.pl is a Perlscript to complete the whole process of cog annotation using COG database and protein sequences as FASTA format file as inputs.  
    Usage: COG_annotation.pl cog-20.fa cog-20.cog.csv cog-20.def.tab fun-20.tab merged_cogs.fa Pan_repersnet_seq.fasta COG_out 16
 
