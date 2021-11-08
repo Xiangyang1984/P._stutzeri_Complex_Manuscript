@@ -24,18 +24,18 @@ Please refer to PGAP manual (https://sourceforge.net/projects/pgap/) for perform
 2. Concat_Seq.pl  Run this command to enble users to concatenate alignment files into a pseudo-DNA fasta file. 
     Usage: Concat_Seq.pl -dir alignment_file_directory
 
-        FOR EXAMPLE: perl Concat_Seq.pl -dir alignment_dir
-        alignment_dir is a directory containing alignment files as FASTA format file.
-        After run Concat_Seq.pl, a concatenation sequence file called "concatenation.fasta" is produced in directory where Concat_Seq.pl is located. The detailed usage instructions is included in extract_protein_dir.pl.
+    FOR EXAMPLE: perl Concat_Seq.pl -dir alignment_dir
+    alignment_dir is a directory containing alignment files as FASTA format file.
+    After run Concat_Seq.pl, a concatenation sequence file called "concatenation.fasta" is produced in directory where Concat_Seq.pl is located. The detailed usage instructions is included in extract_protein_dir.pl.
 
 3. COG annotation analysis
    COG_annotation.pl is a Perlscript to complete the whole process of cog annotation using COG database and protein sequences as FASTA format file as inputs.  
    Usage: COG_annotation.pl cog-20.fa cog-20.cog.csv cog-20.def.tab fun-20.tab merged_cogs.fa Pan_repersnet_seq.fasta COG_out 16
 
-       The latest version of COG database can be download in website https://ftp.ncbi.nih.gov/pub/COG/COG2020/data/, which contains cog-20.fa, cog-20.cog.csv, cog-20.def.tab, fun-20.tab and merged_cogs.fa files. 
-       "Pan_repersnet_seq.fasta" is the protein sequences as FASTA format file.
-       "16" refers to 16 thread number used when runing COG_annotation.pl
-       "COG_out" is the COG annotation result, which a tab separated text file, in which each row contains the protein ID, COG functional category (could include multiple letters in the order of importance), and  COG functional category as single letter. If a gene was assigned to more than one COG category, each COG category is shown as separate row. 
+   The latest version of COG database can be download in website https://ftp.ncbi.nih.gov/pub/COG/COG2020/data/, which contains cog-20.fa, cog-20.cog.csv, cog-20.def.tab, fun-20.tab and merged_cogs.fa files. 
+   "Pan_repersnet_seq.fasta" is the protein sequences as FASTA format file.
+   "16" refers to 16 thread number used when runing COG_annotation.pl
+   "COG_out" is the COG annotation result, which a tab separated text file, in which each row contains the protein ID, COG functional category (could include multiple letters in the order of importance), and  COG functional category as single letter. If a gene was assigned to more than one COG category, each COG category is shown as separate row. 
            For example, the content of "COG_out" file is as follows: 
                Shell|6(323_genes|109_taxa)	LX	L
                Shell|6(323_genes|109_taxa)	LX	X
