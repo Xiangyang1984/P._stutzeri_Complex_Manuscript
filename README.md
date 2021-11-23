@@ -49,3 +49,17 @@ The latest version of COG database can be download in website https://ftp.ncbi.n
     Shell|6(323_genes|109_taxa)	LX	L
     Shell|6(323_genes|109_taxa)	LX	X
     Softcore|7(320_genes|119_taxa)	G	G
+
+#### 4. extract gene sequences from genomes
+
+The step for obtaining the 3 housekeeping genes from assemblies is as follows. Firstly, All genomes were placed in the same folder, which is used as input for gene sequences extraction. 16S rRNA genes were extracted using extract_rRNA_dir.pl included in Gcluster tool (Li et al., 2020). The nucleotide sequence of all genes for each genome was obtained using batch_gene_dir.pl; then the gene IDs for gyrB and rpoD genes were extracted using interested_gene_generation.pl included in Gcluster using the gyrB and rpoD genes of P. stutzeri A1501 as reference sequences; finally, we obtained the nucleotide sequences of gyrB by id_to_geneseq.pl using the nucleotide sequence of all genes for each genome and the gene IDs of the gyrB as input, and we obtained the nucleotide sequences of rpoD by id_to_geneseq.pl using the nucleotide sequence of all genes for each genome and the gene IDs of the rpoD as input.  
+
+* batch_gene_dir.pl: Run this command to extract the nucleotide sequence of all genes for each genome.  
+
+Usage: batch_gene_dir.pl -dir genbank_file_directory [options]
+
+* id_to_geneseq.pl: extract gene sequences according to the gene IDs from a fold containing the nucleotide sequence of all genes for each genome.  
+
+Usage: id_to_geneseq.pl fold (containg all gene sequneces)  gene_id_list (each row contain a gene id)
+
+
