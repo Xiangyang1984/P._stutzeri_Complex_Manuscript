@@ -1,5 +1,6 @@
 # P._stutzeri_Complex_Manuscript
-Serveral Perlscript are used in this Manuscript titled "Comparative Genomics of Pseudomonas stutzeri Complex: Taxonomic Assignments and Genetic Diversity".
+
+Serveral Perlscript are used in this paper: Li X*, Yang Z, Wang Z, Li W, Zhang G, Yan H. Comparative Genomics of Pseudomonas stutzeri Complex: Taxonomic Assignments and Genetic Diversity. Frontiers in Microbiology 2022, DOI: 10.3389/fmicb.2021.755874. 
 
 #### 1. Pan-genome analysis
 
